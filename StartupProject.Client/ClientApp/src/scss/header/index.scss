@@ -1,0 +1,16 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  &-logo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+}

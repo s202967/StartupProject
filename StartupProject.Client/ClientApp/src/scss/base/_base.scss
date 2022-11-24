@@ -1,0 +1,105 @@
+html {
+  // font-size: 10px;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 100% $font-stack;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+#root {
+  background: #f1f1f1;
+}
+textarea {
+  font-family: $font-stack;
+}
+code {
+  // font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+a,
+ul,
+li {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+main {
+  padding: 4rem;
+}
+/*# sourceMappingURL=base.css.map */
+
+// svg {
+//   display: block;
+//   width: 1em;
+//   height: 1em;
+//   fill: currentColor;
+// }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.error {
+  &__message {
+    display: block;
+    font-size: 12px;
+    color: #{$color-red};
+    font-weight: 400 !important;
+    margin-left: 1rem;
+  }
+  .makeStyles-input-2,
+  .css-yk16xz-control,
+  .pickers .MuiInputBase-root,
+  .form-group__input {
+    border: 1px solid #{$color-red};
+  }
+  label {
+    color: #{$color-red} !important;
+  }
+}
+.MuiInput-underline:after,
+.MuiInput-underline::before {
+  border-bottom: 0 !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  display: none !important;
+}
+.error {
+  .MuiInputBase-root {
+    border: 1px solid #{$color-red} !important;
+    border-radius: 4px;
+    .makeStyles-input-2 {
+      border: none !important;
+    }
+  }
+  .daterangepicker {
+    border: 1px solid #{$color-red} !important;
+  }
+}
+
+.filters-input {
+  padding: 1rem 0 !important;
+}
+// .css-b8ldur-Input{
+//   width: 100%;
+//   padding-left: .5rem;
+// }

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .login-form {
+    margin-top: 100px;
+    width: 400px;
+    height: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    .el-button {
+      width: 100%;
+    }
+    &__forgot {
+      display: flex;
+      justify-content: center;
+
+      .forgot-link {
+        padding: 0px 10px;
+        color: #787878;
+        cursor: pointer;
+        font-size: 13px;
+
+        &:first-child {
+          border-right: 1px solid #a5a4a4;
+        }
+
+        //1px solid #d8d8d8;
+      }
+    }
+  }
+}

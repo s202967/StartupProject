@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IUnitMeasureService.cs" />
+    <Compile Remove="UnitMeasureService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.5.1.42" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.5.0.42" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StartupProject.Core\StartupProject.Core.csproj" />
+    <ProjectReference Include="..\StartupProject.EntityFramework\StartupProject.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Security\UserActivity\" />
+  </ItemGroup>
+
+</Project>

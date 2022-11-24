@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StartupProject.Client</name>
+    </assembly>
+    <members>
+        <member name="T:StartupProject.Client.Configuration.Mapper.AdminMapperConfiguration">
+            <summary>
+            AutoMapper configuration for admin area models
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Configuration.Mapper.AdminMapperConfiguration.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Configuration.Mapper.AdminMapperConfiguration.Order">
+            <summary>
+            Order of this mapper implementation
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Extension.ApplicationBuilderExtensions">
+            <summary>
+            Represents extensions of IApplicationBuilder
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ApplicationBuilderExtensions.ConfigureRequestPipeline(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configure the application HTTP request pipeline
+            </summary>
+            <param name="application">Builder for configuring an application's request pipeline</param>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ApplicationBuilderExtensions.ConfigureAuth(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configure auth pipeline
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:StartupProject.Client.Extension.ClientConfigurationExtension">
+            <summary>
+            Represents extensions of IServiceCollection for common services
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ClientConfigurationExtension.ConfigureClientStartupServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            configure factories
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ClientConfigurationExtension.AwsSesStartup(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            AWS simple email service registration
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ClientConfigurationExtension.MvcStartup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            MVC services
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ClientConfigurationExtension.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             Configure Swagger
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:StartupProject.Client.Extension.ConfigureAttributeExtension">
+            <summary>
+            Represents extensions of IServiceCollection for attribute registration
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ConfigureAttributeExtension.ConfigureAttributes(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            configure attributes
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:StartupProject.Client.Extension.ConfigureClientServicesExtension">
+            <summary>
+            Represents extensions of IServiceCollection for factory classes
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.ConfigureClientServicesExtension.ConfigureClientServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            configure factory classes
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:StartupProject.Client.Extension.FileExtension">
+            <summary>
+            File related extensions
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.FileExtension.ReadBytes(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Gets the download binary array
+            </summary>
+            <param name="file">File</param>
+            <returns>Download binary array</returns>
+        </member>
+        <member name="T:StartupProject.Client.Extension.MappingExtensions">
+            <summary>
+            automapper extension
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.MapTo``2(``0)">
+            <summary>
+            map source to destination
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.MapTo``2(``0,``1)">
+            <summary>
+            map source to destination
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.ToEntity(StartupProject.Client.Features.Security.User.Dto.UserDto,StartupProject.Core.Security.Identity.AppUser)">
+            <summary>
+            Map user dto to entity
+            </summary>
+            <param name="dto"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.ToDto(StartupProject.Core.Security.Identity.AppUser)">
+            <summary>
+            Map user entity to dto
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.ToEntity(StartupProject.Client.Features.Security.User.Dto.RoleDto,StartupProject.Core.Security.Identity.ApplicationRole)">
+            <summary>
+            Map role dto to entity
+            </summary>
+            <param name="dto"></param>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.ToDto(StartupProject.Core.Security.Identity.ApplicationRole)">
+            <summary>
+            Map role entity to dto
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.MappingExtensions.ToUserWithRoleDto(StartupProject.Core.Security.Identity.AppUser)">
+            <summary>
+            Map user entity to user with role dto
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Extension.System_.ModelStateDictionaryExtensions">
+            <summary>
+            Extension for model validation
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Extension.System_.ModelStateDictionaryExtensions.GetModelErrors(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            gets error list
+            </summary>
+            <param name="dict"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Extension.System_.ModelStateDictionaryExtensions.GetModelErrorText(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,System.String)">
+            <summary>
+            Join error list to string
+            </summary>
+            <param name="dict"></param>
+            <param name="delimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.BaseController">
+            <summary>
+            Base class with resulting methods
+            </summary>
+        </member>
+        <member name="F:StartupProject.Client.Features.BaseController._logger">
+            <summary>
+            Logger instance
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.BaseController.LogResponse(StartupProject.Core.ServiceResult.IServiceResult)">
+            <summary>
+            Log service response
+            </summary>
+            <param name="serviceResp"></param>
+        </member>
+        <member name="M:StartupProject.Client.Features.BaseController.JOk``1(``0)">
+            <summary>
+            Ok responses
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="resp"> </param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.BaseController.JOk``1(``0,System.Object)">
+            <summary>
+            Ok responses
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="resp"> </param>
+            <param name="dto"></param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.BasePrivateController">
+            <summary>
+            This class will be inherited by all secured controllers.
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.BasePrivateController.#ctor">
+            <summary>
+            Inject Logger service
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.BasePublicController">
+            <summary>
+            This class will be inherited by all public controllers.
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.BasePublicController.#ctor">
+            <summary>
+            Inject common services
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Controllers.MetaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Controllers.MetaController.#ctor(StartupProject.Services.Common.Settings.ICommonService)">
+            <summary>
+            Inject related services
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Controllers.MetaController.GetTemplates">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Controllers.MetaController.GetSections">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Controllers.MetaController.GetCheckList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Controllers.MetaController.GetComponents">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Dto.AssetSubCodeSearchDto">
+            <summary>
+            Represents asset sub code search request DTO
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.AssetSubCodeSearchDto.GrpCode">
+            <summary>
+            Asset group code
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.AssetSubCodeSearchDto.SubGrpCode">
+            <summary>
+            Asset sub-group code
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Dto.AssetSubCodeSearchDto.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1">
+            <summary>
+            base class for paged list item
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.Data">
+            <summary>
+            Gets or sets data records
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.PageIndex">
+            <summary>
+            Page Index
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.RecordsTotal">
+            <summary>
+            Gets or sets a number of total data records
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.Status">
+            <summary>
+            Service response status
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.Message">
+            <summary>
+            message 
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BasePagedListDto`1.MessageType">
+            <summary>
+            message type
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Dto.BaseSearchDto">
+            <summary>
+            Represents base search model
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BaseSearchDto.PageIndex">
+            <summary>
+            Page index
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Common.Dto.BaseSearchDto.PageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Factories.CommonDtoFactory">
+            <summary>
+            Represents common dto factory
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Common.Factories.CommonDtoFactory.#ctor">
+            <summary>
+            Injecting factory and services
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Common.Factories.ICommonDtoFactory">
+            <summary>
+            Represents common dto factory
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Controllers.AuthController">
+            <summary>
+            Auth services
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.AuthController.#ctor(StartupProject.Services.Security.User.IAuthService)">
+            <summary>
+            ctor
+            </summary>
+            <param name="authService"></param>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.AuthController.SignInAsync(StartupProject.Client.Features.Security.User.Dto.SignInDto)">
+            <summary>
+            Authenticate user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.AuthController.RefreshTokenAsync(System.String)">
+            <summary>
+            Refresh token
+            </summary>
+            <returns></returns>'
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.AuthController.SignOutAsync">
+            <summary>
+            Sign out
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Controllers.RoleController">
+            <summary>
+            Contains user role services
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.#ctor(StartupProject.Services.Security.User.IRoleService)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="roleService"></param>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.GetRolesAsync">
+            <summary>
+            Retrieves all roles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.CreateAsync(StartupProject.Client.Features.Security.User.Dto.RoleDto)">
+            <summary>
+            Create a new role
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.GetDetailsAsync(System.String)">
+            <summary>
+            Retrieve the role by Identifier
+            </summary>
+            <param name="id">The id of the role you want to get</param>
+            <returns>Role with Name,Description,.. field</returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.UpdateAsync(StartupProject.Client.Features.Security.User.Dto.RoleDto)">
+            <summary>
+            Update a role
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.RoleController.DeleteAsync(System.String)">
+            <summary>
+            Delete a role record
+            </summary>
+            <param name="id">role Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Controllers.UserController">
+            <summary>
+            Contains user related service
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.#ctor(StartupProject.Services.Security.User.IUserService,StartupProject.Client.Features.Security.User.Factories.IUserDtoFactory,Microsoft.Extensions.Logging.ILogger{StartupProject.Client.Features.Security.User.Controllers.UserController})">
+            <summary>
+            Ctor
+            </summary>
+            <param name="userService"></param>
+            <param name="userDtoFactory"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.GetUserListAsync(StartupProject.Client.Features.Security.User.Dto.UserSearchDto)">
+             <summary>	
+            Get all user	
+             </summary>	
+             <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.CreateAsync(StartupProject.Client.Features.Security.User.Dto.CreateUserDto)">
+            <summary>
+            Create new user
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.UpdateAsync(StartupProject.Client.Features.Security.User.Dto.UserDto)">
+            <summary>
+            Update user information
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.GetDetailByUserName(System.String)">
+            <summary>	
+            Gets user detail by user name	
+            </summary>	
+            <returns>User dto</returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.DeleteAsync(System.String)">
+            <summary>	
+            Delete a user
+            </summary>	
+            <param name="userId"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.GetUserAsync">
+            <summary>	
+            Retrieves current logged-in user details	
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.UpdateUserStatusAsync(System.String,System.Boolean)">
+            <summary>
+            Enable|disable user
+            </summary>
+            <param name="userId">User id</param>
+            <param name="status">true:enable, false:disable</param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.SendUserNameToEmailAsync(System.String)">
+            <summary>	
+            Send user name to user email	
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.ForgotPasswordAsync(StartupProject.Client.Features.Security.User.Dto.ForgotPasswordReqDto)">
+             <summary>	
+            Send password reset link to registered user email	
+             </summary>	
+             <param name="dto"></param>	
+             <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.ResetPassword(StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto)">
+            <summary>	
+            Reset password using reset password token	
+            </summary>	
+            <param name="dto"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.ChangePasswordAsync(StartupProject.Client.Features.Security.User.Dto.ChangePasswordDto)">
+            <summary>	
+            Change password	
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Controllers.UserController.ChangeUserPasswordAsync(StartupProject.Client.Features.Security.User.Dto.ChangeUserPasswordDto)">
+            <summary>	
+            Change other user password from admin account	
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.ChangePasswordDto">
+            <summary>
+            Change password request with current password, new password
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ChangePasswordDto.CurrentPassword">
+            <summary>
+            Current password
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ChangePasswordDto.NewPassword">
+            <summary>
+            New password
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ChangePasswordDto.ConfirmNewPassword">
+            <summary>
+            Confirm new password
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.ChangeUserPasswordDto">
+            <summary>
+            Change other User Password from Admin account
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ChangeUserPasswordDto.UserName">
+            <summary>
+            User identifier
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ChangeUserPasswordDto.NewPassword">
+            <summary>
+            New password
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.CreateUserDto">
+            <summary>
+            Represents user input dto
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.CreateUserDto.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.ForgotPasswordReqDto">
+            <summary>
+            Change password request with Email
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ForgotPasswordReqDto.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto">
+             <summary>
+            ResetPassword Dto with UserId, Password, Code and Description fields.
+             </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto.UserId">
+            <summary>
+            User id
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.ResetPasswordDto.ConfirmPassword">
+            <summary>
+            Confirm password
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.RoleDto">
+            <summary>
+            Represents a user role dto
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.RoleDto.Id">
+            <summary>
+            Role id | identifier
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.RoleDto.Name">
+            <summary>
+            Role name
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.SignInDto">
+            <summary>
+            Sign in request DTO
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.SignInDto.UserName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.SignInDto.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.UserDto">
+            <summary>
+            Represents user dto
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.Id">
+            <summary>
+            Id | identifier
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.FullName">
+            <summary>
+            Full Name
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.MobileNumber">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.OfficePhoneNumber">
+            <summary>
+            Office phone number
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.UserName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.UserImage">
+            <summary>
+            User image
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.UserImageThumbnail">
+            <summary>
+            User image thumbnail
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.ApprovalRoleDirectorateRefIds">
+            <summary>
+            Comma separated approval role directorate ids
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.ApprovalRoleProvinceRefIds">
+            <summary>
+            Comma separated approval role province ids
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserDto.Roles">
+            <summary>
+            Role names
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.UserListSearchResultDto">
+            <summary>
+            Represents user list search result DTO
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.UserSearchDto">
+            <summary>
+            Represents user search request DTO
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserSearchDto.UserName">
+            <summary>
+            User name filter
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserSearchDto.Status">
+            <summary>
+            True:active users, False:disabled users
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Dto.UserSearchDto.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Dto.UserWithRoleDto">
+            <summary>
+            User with roles info
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserWithRoleDto.UserImage">
+            <summary>
+            User image
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserWithRoleDto.UserImageThumbnail">
+            <summary>
+            User image thumbnail
+            </summary>
+        </member>
+        <member name="P:StartupProject.Client.Features.Security.User.Dto.UserWithRoleDto.URoles">
+            <summary>
+            User Roles
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Dto.UserWithRoleDto.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Factories.IUserDtoFactory">
+            <summary>
+            Represents user dto factory
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Factories.IUserDtoFactory.GetUserListAsync(StartupProject.Client.Features.Security.User.Dto.UserSearchDto)">
+            <summary>
+            Ger user list
+            </summary>
+            <param name="searchDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Factories.IUserDtoFactory.UpdateUserStatusAsync(System.String,System.Boolean)">
+            <summary>
+            Enable|disable user
+            </summary>
+            <param name="userId">User id</param>
+            <param name="status">true:enable, false:disable</param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Features.Security.User.Factories.UserDtoFactory">
+            <summary>
+            Represents user dto factory
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Factories.UserDtoFactory.#ctor(StartupProject.Services.Security.User.IUserService,StartupProject.Services.Common.Localization.ILocalizationService,StartupProject.Core.Security.UserActivity.IClientInfoProvider)">
+            <summary>
+            Inject services
+            </summary>
+            <param name="userService"></param>
+            <param name="localizationService"></param>
+            <param name="clientInfoProvider"></param>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Factories.UserDtoFactory.GetUserListAsync(StartupProject.Client.Features.Security.User.Dto.UserSearchDto)">
+            <summary>
+            Ger user list
+            </summary>
+            <param name="searchDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Features.Security.User.Factories.UserDtoFactory.UpdateUserStatusAsync(System.String,System.Boolean)">
+            <summary>
+            Enable|disable user
+            </summary>
+            <param name="userId">User id</param>
+            <param name="status">true:enable, false:disable</param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Filters.AuthenticationFilter">
+            <summary>
+            Authentication filter
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Filters.AuthenticationFilter.#ctor(StartupProject.Core.Infrastructure.DependencyManagement.ISessionProvider)">
+            <summary>
+            Service injection
+            </summary>
+            <param name="sessionProvider"></param>
+        </member>
+        <member name="M:StartupProject.Client.Filters.AuthenticationFilter.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <summary>
+            Share user id to db context
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Filters.DateMustLessThanCurrentDateAttribute">
+            <summary>
+            Data Annotations checking for date to equal or be more than curernt date
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Filters.DateMustLessThanCurrentDateAttribute.IsValid(System.Object)">
+            <summary>
+            Is valid
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Filters.UnitOfWorkAttribute">
+            <summary>
+            Unit of work handler
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Filters.UnitOfWorkAttribute.#ctor(StartupProject.Services.Helpers.ITransactionManager)">
+            <summary>
+            ctor
+            </summary>
+            <param name="helper"></param>
+        </member>
+        <member name="M:StartupProject.Client.Filters.UnitOfWorkAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Begin transaction
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:StartupProject.Client.Filters.UnitOfWorkAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            End transaction
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:StartupProject.Client.Filters.ValidateDtoAttribute">
+            <summary>
+            Attribute for DTO validation
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Filters.ValidateDtoAttribute.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            ctor
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:StartupProject.Client.Filters.ValidateDtoAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Validate Dto
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:StartupProject.Client.Middleware.ExceptionMiddlewareExtensions">
+            <summary>
+            Global exception handler
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Middleware.ExceptionMiddlewareExtensions.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger{StartupProject.Client.Startup},Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            configure 
+            </summary>
+            <param name="app"></param>
+            <param name="logger"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:StartupProject.Client.Program">
+            <summary>
+            entry point to the application
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Program.Main(System.String[])">
+            <summary>
+            main method
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StartupProject.Client.Program.CreateHostBuilder(System.String[])">
+            <summary>
+             create and configure a builder object
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StartupProject.Client.Startup">
+            <summary>
+            Includes a ConfigureServices method to configure the app's services
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:StartupProject.Client.Startup.Configuration">
+            <summary>
+            providers configuration data
+            </summary>
+        </member>
+        <member name="M:StartupProject.Client.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:StartupProject.Client.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{StartupProject.Client.Startup})">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="logger"></param>
+        </member>
+    </members>
+</doc>

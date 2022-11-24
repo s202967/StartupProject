@@ -1,0 +1,473 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin label {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.00938em;
+  margin-bottom: 0.35rem;
+}
+
+@mixin customScroll {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+@mixin placeholderText {
+  color: rgba(0, 0, 0, 0.54);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  font-size: 14px;
+}
+
+@mixin inputFocusStyle {
+  outline: none;
+  border-color: #{$btn-primary-color};
+  border-width: 1px;
+  background-color: #fff;
+  // box-shadow: $btn-primary-color 0px 0px 0px 0px inset;
+  box-shadow: 0 0 0 0.2px #{$btn-primary-color},
+    0 0 0 2.5px rgba($btn-primary-color, 0.4);
+}
+
+@mixin hideInputNumberArrows {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@mixin buttonMixin($bgColor, $color, $hoverType, $hoverLevel: 7) {
+  background-color: #{$bgColor};
+  color: #{$color};
+
+  .button-text {
+    color: #{$color} !important;
+  }
+  svg,
+  i {
+    color: #{$color} !important;
+  }
+  &:hover {
+    @if $hoverType == lighten {
+      background-color: lighten($bgColor, $hoverLevel);
+    } @else {
+      background-color: darken($bgColor, $hoverLevel);
+    }
+  }
+  &:active {
+    background-color: $bgColor;
+  }
+}
+@mixin buttonOutlineMixin($bgColor, $color, $hoverType, $hoverLevel: 7) {
+  border: 1px solid #{$bgColor};
+  color: #{$bgColor};
+
+  .button-text {
+    color: #{$bgColor} !important;
+  }
+  svg,
+  i {
+    color: #{$bgColor} !important;
+  }
+  &:hover {
+    color: #{$color};
+    span {
+      color: #{$color} !important;
+    }
+    svg,
+    i {
+      color: #{$color} !important;
+    }
+    @if $hoverType == lighten {
+      background-color: lighten($bgColor, $hoverLevel);
+    } @else {
+      background-color: darken($bgColor, $hoverLevel);
+    }
+  }
+  // &:active{
+  //   background-color: transparent;
+  // }
+}
+@mixin heading($num, $color: #333) {
+  
+  @if $num == 1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #{$color};
+  } @else if $num == 2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #{$color};
+  } @else if $num == 3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #{$color};
+  } @else if $num == 4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #{$color};
+  } @else if $num == 5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #{$color};
+  } @else {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #{$color};
+  }
+}
+
+@mixin bodyText($num: 1, $color: #333) {
+  color: #{$color};
+  font-weight: 400;
+  @if $num == 1 {
+    font-size: 14px;
+    line-height: 20px;
+  } @else if $num == 2 {
+    font-size: 13px;
+    line-height: 20px;
+  } @else if $num == 3 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@mixin containerWidth {
+  width: 1600px;
+  max-width: 100%;
+}
+
+@mixin customScroll {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9f9f9f;
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+}
+@mixin customScrollSm {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9f9f9f;
+    border-radius: 6px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+}
+
+@mixin customScroll2 {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #787878;
+    border-radius: 7px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444;
+  }
+}
+
+@mixin link {
+  cursor: pointer;
+  border-bottom: 1px solid rgb(39, 39, 226);
+  font-weight: 500;
+}
+
+//Grid
+@mixin row() {
+  font-size: 0;
+
+  &:first-child {
+    padding-left: 0 !important;
+  }
+  &:last-child {
+    padding-right: 0 !important;
+  }
+}
+@mixin col($col, $sum, $gap: 1em, $align: top) {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: if($first, 0, $gap);
+  padding-right: if($last, 0, $gap);
+
+  @media only screen and (min-width: 768px) {
+    width: percentage($col/$sum);
+    vertical-align: $align;
+  }
+}
+
+@mixin overlayBefore($color) {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+  }
+}
+@mixin overlay($color) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color;
+}
+
+// @mixin respond($breakpoint) {
+//     @if $breakpoint == phone {
+//         @media only screen and (min-width:0) and (max-width: 37.499em) { @content };    //600px
+//     }
+//     @else if $breakpoint == sm-tab {
+//         @media only screen and (min-width: 37.5em) and (max-width:45.4999999em) { @content };    //600px
+//     }
+//     @else if $breakpoint == tab {
+//         @media only screen and (min-width: 45.5em) and (max-width:55.999999999em){ @content };     //900px56
+//     }
+//     @else if $breakpoint == desktop {
+//         @media only screen and (min-width: 56em) and (max-wdth:74.999999999em) { @content };    //1200px
+//     }
+//     @else if $breakpoint == med-desktop {
+//         @media only screen and (min-width: 75em) and (max-width:89.999999999em) { @content };    //1440px
+//     }
+//     @else if $breakpoint == big-desktop {
+//         @media only screen and (min-width: 90em) { @content };    //1800
+//     }
+//     @else {
+//         @warn "Breakpoint mixin supports: xs, sm, md, lg";
+//       }
+// }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 0) and (max-width: 599px) {
+      @content;
+    } //600px
+  } @else if $breakpoint == sm-tab {
+    @media only screen and (min-width: 600px) {
+      @content;
+    } //600px
+  } @else if $breakpoint == tab {
+    @media only screen and (min-width: 900px) {
+      @content;
+    } //900px56
+  } @else if $breakpoint == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    } //1200px
+  } @else if $breakpoint == med-desktop {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    } //1440px
+  } @else if $breakpoint == big-desktop {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    } //1800
+  } @else {
+    @warn "Breakpoint mixin supports: phone, sm-tab, tab, desktop,med-desktop,big-desktop";
+  }
+}
+
+// $breakpoints: (
+//   'phone':  ( min-width:  767px ),
+//   'medium': ( min-width:  992px ),
+//   'large':  ( min-width: 1200px )
+// ) !default;
+
+@mixin dropDownContent {
+  position: absolute;
+  width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  // top: 60px;
+  // left: -110px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-radius: 4px;
+  transition: 0.3s all ease-in-out;
+
+  &:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    z-index: -1;
+    background-color: #fff;
+    border: 1px solid #e5eaed;
+    border-bottom: 1px solid transparent;
+    // border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transform: rotate(45deg);
+    top: -8px;
+    left: 75%;
+  }
+}
+
+@mixin selection {
+  ::-moz-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin triangle(
+  $color,
+  $direction,
+  $size: 6px,
+  $position: absolute,
+  $round: false
+) {
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+
+  @if $round {
+    border-radius: 3px;
+  }
+
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round($size / 2.5);
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round($size / 2.5);
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}

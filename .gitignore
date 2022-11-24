@@ -1,0 +1,17 @@
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Ll]og/
+[Ll]ogs/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+
+.vs/
+.vscode/
+
+Uploads/
+packages/

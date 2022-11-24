@@ -1,0 +1,25 @@
+.app {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", "Mukta", "Helvetica", "Arial", "sans-serif";
+  font-weight: 400;
+  font-size: $default-fontSize;
+  color: #444;
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // min-height: 100vh;
+  }
+  .ctrl-check-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .el-form-item__label {
+    font-weight: bold;
+  }
+  .el-table__empty-block {
+    display: none;
+  }
+}

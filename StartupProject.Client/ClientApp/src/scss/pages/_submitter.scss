@@ -1,0 +1,39 @@
+.submission {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  &-tab-container {
+    padding: 20px;
+  }
+  .el-checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .el-checkbox {
+    margin-left: 0px !important;
+  }
+  .upload-steps {
+    &__submissions {
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background: #f1f1f1;
+        align-items: center;
+        &-action {
+          display: flex;
+          div {
+            margin-left: 10px;
+          }
+        }
+      }
+      &-footer {
+        margin-top: 20px;
+      }
+    }
+  }
+  .author-steps {
+    padding: 40px;
+  }
+}

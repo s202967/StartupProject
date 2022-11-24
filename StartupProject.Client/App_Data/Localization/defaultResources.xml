@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English" LanguageCulture = "en-US">
+  <LocaleResource Name="404">
+    <Value>The request resource is not found.</Value>
+  </LocaleResource>
+  <LocaleResource Name="401">
+    <Value>Unauthorized: Access to this resource is denied.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidRequest">
+    <Value>Request is not valid.</Value>
+  </LocaleResource>
+  <LocaleResource Name="RecordNotFound">
+    <Value>Data not found for {0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="TechincalProblemOccured">
+    <Value>We are unable to process your request at this time. Please try again later, and if the problem persists, contanct your system administrator.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddNewRecord">
+    <Value>{0} has been created successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="EditRecord">
+    <Value>{0} has been updated successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="DeleteRecord">
+    <Value>{0} has been deleted successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CancelRequest">
+    <Value>{0} has been canceled successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="RecordAlreadyExist">
+    <Value>Data with the name {0} already exist.</Value>
+  </LocaleResource>
+  <LocaleResource Name="RecordInUse">
+    <Value>{0} is already used, cannot be deleted.</Value>
+  </LocaleResource>
+  <!-- Email-->
+  <LocaleResource Name="MailSent">
+    <Value>Mail has been sent successfully.</Value>
+  </LocaleResource> 
+  <LocaleResource Name="Email.Sent.Success">
+    <Value>Email has been sent successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Email.Sent.Failure">
+    <Value>Error occurred while sending email.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Email.Config.NotFound">
+    <Value>Email configuration not found.</Value>
+  </LocaleResource>
+  <!--Attachment-->
+  <LocaleResource Name="Attachement.NotFound">
+    <Value>"File not found. Check the file name and try again.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Attachement.Failed">
+    <Value>Failed to upload a file.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Attachement.Invalid">
+    <Value>Your uploaded file is invalid. ({0}) is not a valid extension.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Attachement.Uploaded">
+    <Value>{0} is uploaded.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Attachement.Error">
+    <Value>Some error occured while uploading {0}.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Attachement.Deleted">
+    <Value>Attachment of record id : {0} on table : {1} deleted successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="File.RootFolderNotFound">
+    <Value>Root folder name missing in configuration file.</Value>
+  </LocaleResource>
+  <!--User-->
+  <LocaleResource Name="User.Status.Changed">
+    <Value>User has been {0} successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Credential.Invalid">
+    <Value>The user name or password is incorrect.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Authentication.Succeed">
+    <Value>User has been authenticated successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.locked">
+    <Value>Your account has been locked, please try again in {0} minutes.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Password.Updated">
+    <Value>New password updated successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Password.Changed">
+    <Value>Password changed successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Password.ChangeFailed">
+    <Value>Failed to update password.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.RefreshToken.Invalid">
+    <Value>Refresh token is not valid.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Token.Refresh">
+    <Value>Token refreshed successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Password.Incorrect">
+    <Value>The old password you have entered is incorrect.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.PasswordResetLink.SentSuccessfully">
+    <Value>Please check your email to reset your password.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Email.NotExist">
+    <Value>The email account that you tried to reach does not exist.Please contact to your system administrator.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.AwsProfile.NotExist">
+    <Value>The AWS Access Key does not exist in your records. </Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Name.SentSuccessfully">
+    <Value>We have sent an email with a user name to your email address. Please check.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Email.Send.Failed">
+    <Value>We could not send the password reset email. Please contact support.</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.ResetPassword.MailSendNotAllowedFromLocalhost">
+    <Value>Not Allowed to send mail to this email from localhost.</Value>
+  </LocaleResource>
+</Language>

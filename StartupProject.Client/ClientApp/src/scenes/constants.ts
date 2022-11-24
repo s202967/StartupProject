@@ -1,0 +1,1 @@
+export const test = `${window.location.origin}/v1/`;

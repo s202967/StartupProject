@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>StartupProject.Core</RootNamespace>
+    <AssemblyName>StartupProject.Core</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain\DbEntityOld\**" />
+    <Compile Remove="Domain\Interfaces_old\**" />
+    <Compile Remove="Domain\SpEntity_old\**" />
+    <EmbeddedResource Remove="Domain\DbEntityOld\**" />
+    <EmbeddedResource Remove="Domain\Interfaces_old\**" />
+    <EmbeddedResource Remove="Domain\SpEntity_old\**" />
+    <None Remove="Domain\DbEntityOld\**" />
+    <None Remove="Domain\Interfaces_old\**" />
+    <None Remove="Domain\SpEntity_old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="EasyCaching.Core" Version="1.1.0" />
+    <PackageReference Include="EasyCaching.InMemory" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
